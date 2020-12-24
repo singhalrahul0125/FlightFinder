@@ -75,7 +75,7 @@ curl --location --request GET 'http://localhost:8082/flightfinder/browseflights/
 ### Browse Dates
 For a given origin and destination, this API will return all possible flights in the future irrespective of inbound and outbound dates. The results will be in ascending order of price. 
 
-###Request
+### Request
 ```
 GET http://{host}:{port}/flightfinder/browsedates/{origin}/{destination}
 ```
@@ -84,7 +84,7 @@ GET http://{host}:{port}/flightfinder/browsedates/{origin}/{destination}
 | Parameter        | Type    | Required  |     Description  |
 | :--------------- |:--------| :---------|:-----------------|
 | origin           | String  |    yes    |IATA code of origin airport. For eg. DEL for Delhi, India.
-| destination      | String  |    yes    |IATA code of destination airport. For eg. DEL for Delhi, India.
+| destination      | String  |    yes    |IATA code of destination airport. For eg. MUC for Munich, Germany.
 
 #### Sample Request and Response
 
@@ -231,7 +231,7 @@ curl --location --request GET 'http://localhost:8082/flightfinder/browsedates/DE
 ### Subscribe
 Allows user to get notification via e-mail when the flights fare reduced below a certain threshold predefined by user.
 
-###Request
+### Request
 ```
 POST http://{host}:{port}/flightfinder/subscribe/{origin}/{destination}/{desiredFare}
 ```
@@ -273,7 +273,7 @@ User can unsubscribe in two ways.
 #### Unsubscribe email Id
 In this case, all the preferences saved using the given email id will be deleted and no more notifications will be sent to user's email id. 
 
-####Request
+#### Request
 ```
 POST http://{host}:{port}/flightfinder/unsubscribe
 ```
@@ -303,6 +303,14 @@ User has a choice to delete a specific preference by providing origin, destinati
 ```
 POST http://{host}:{port}/flightfinder/subscribe/{origin}/{destination}
 ```
+##### Request parameters
+
+| Parameter        | Type    | Required  |     Description  |
+| :--------------- |:--------| :---------|:-----------------|
+| origin           | String  |    yes    |IATA code of origin airport. For eg. MUC for Munich, Germany.
+| destination      | String  |    yes    |IATA code of destination airport. For eg. DEL for Delhi, India.
+
+
 ###### Request body
 
 | Parameter        | Type    |     Description  |
