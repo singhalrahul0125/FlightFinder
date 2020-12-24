@@ -75,7 +75,7 @@ curl --location --request GET 'http://localhost:8082/flightfinder/browseflights/
 ### Browse Dates
 For a given origin and destination, this API will return all possible flights in the future irrespective of inbound and outbound dates. The results will be in ascending order of price. 
 
-### Request
+#### Request
 ```
 GET http://{host}:{port}/flightfinder/browsedates/{origin}/{destination}
 ```
