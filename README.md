@@ -57,6 +57,7 @@ GET http://{host}:{port}/flightfinder/browseflights/{origin}/{destination}/{outb
 ```
 curl --location --request GET 'http://localhost:8082/flightfinder/browseflights/DEL/MUC/2021-01-20'
 ```
+
 ##### Sample Response
 ```
 [
